@@ -1,0 +1,20 @@
+image: Visual Studio 2019
+
+install:
+  - ps: Install-Product node 16
+  - npm install
+
+build_script:
+  - npm run build
+
+artifacts:
+  - path: dist
+    name: dist
+
+deploy:
+  provider: GitHub
+  auth_token:
+    secure: YOUR_SECURE_TOKEN
+  artifact: dist
+  on:
+    branch: main
