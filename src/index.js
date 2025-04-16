@@ -1,3 +1,5 @@
+import image from "./goblin.png"
+
 document.addEventListener('DOMContentLoaded', () => {
     const board = document.getElementById('game-board');
     const rows = 4;
@@ -15,7 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
   
     // Добавляем гнома в случайную ячейку
     const goblin = document.createElement('img');
-    goblin.src = 'https://raw.githubusercontent.com/netology-code/ahj-homeworks/refs/heads/AHJ-50/dom/pic/goblin.png';
+    //goblin.src = 'https://raw.githubusercontent.com/netology-code/ahj-homeworks/refs/heads/AHJ-50/dom/pic/goblin.png';
+    goblin.src = image;
     cells[currentCellIndex].appendChild(goblin);
   
     // Функция перемещения гнома

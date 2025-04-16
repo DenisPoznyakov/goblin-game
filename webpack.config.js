@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { type } = require('os');
 
 module.exports = {
   entry: './src/index.js', // Точка входа
@@ -23,6 +24,10 @@ module.exports = {
       {
         test: /\.css$/, // Обработка CSS
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resouece",
       },
     ],
   },
